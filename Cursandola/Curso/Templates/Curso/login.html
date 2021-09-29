@@ -1,0 +1,27 @@
+{% extends 'Curso/base.html' %}
+
+{% block content %}
+    {% load static %}
+<div class="inicio_login">
+                <div class="banner">
+                    <img src="{% static 'Curso/img/apol_login_4.jpg'%}" alt="">
+                </div>
+                <div class="login">
+                    <div class="login_encabezado">
+                        <h2 class="texto">¿Tienes Cuenta?</h3>
+                        <h2 class="texto">¡Logueate!</h3>
+                        </div>
+                        <div class="login_form">
+                    <form action="">
+                        <input id="user-name" name="user-name" placeholder="Correo Electronico" type="text" />
+                        <input id="password" name="password" placeholder="Contraseña" type="password" />
+                    </form>
+                </div>
+                        <div class="myButton">Entrar</div>
+                        <div class="texto login_form">
+                          <a href="#">¿Olvidaste tu contraseña?</a>
+                      </div>
+                </div>
+            </div>
+
+{% endblock %}

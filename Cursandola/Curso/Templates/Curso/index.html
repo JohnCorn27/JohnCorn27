@@ -1,0 +1,52 @@
+{% extends 'Curso/base.html' %}
+
+{% block content %}
+
+
+            <div class="contenido_preview">
+                <div class="dashboard_izquierda">
+                    <!-- ===== APOL INFORMACION ===== -->
+
+                       <div class="encabezado_dashboard">
+                           <h3 class="texto">Dashboard</h3>
+                       </div>
+                   <div class="items">
+                       <h4 class="texto items"> <span class="icons"><i class="fas fa-brain"></i></span>¿Qué es Apol?</h4>
+                       <h4 class="texto items"><span class="parpadea"><i class="fas fa-video"></i></span>En vivo</h4>
+                       <h4 class="texto items"> <span class="icons"><i class="fas fa-tv"></i></span>Nuestros Cursos</h4>
+                   </div>
+
+               </div>
+               <!-- ===== DIV 2/3 DASHBOARD DERECHO ===== -->
+               <div class="dashboard_derecha">
+                   <!-- ===== DIV BUSCADOR ===== -->
+                   <div class="buscador">
+                   <h3 class="texto bold encabezado_buscador">¿Quieres pasar el Pre Politecnico?</h3>
+                   <h4 class="texto bold encabezado_buscador">Más de 200 videos, todo el material para que pases tu prepo</h4>
+
+
+                   <div class="general">
+
+
+                       {% for tema in temas %}
+                       <div class="tema_card_gen">
+                        <div class="card_gen fundamento">
+                            <h6 class="categoria">{{ tema.Nivel }}</h6>
+                            <h3 class="tema">{{ tema.nombre }}</h2>
+                            <h7 class="mirar_sub_tem">{{ tema.Descripcion }} <i class="fas fa-chevron-right"></i></h7>
+                        </div>
+                    </div>
+                       {% endfor %}
+                       
+
+
+                </div>
+                   <!-- ===== DIV CATEGORIA ===== -->
+                   <!-- ===== DIV CARD_CURSO_GENERAL ===== -->
+
+                   </div>
+
+            </div>
+
+
+{% endblock %}

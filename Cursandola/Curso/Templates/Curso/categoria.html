@@ -1,0 +1,61 @@
+{% extends 'Curso/base.html' %}
+
+{% block content %}
+
+
+            <div class="contenido_preview">
+                <div class="dashboard_izquierda">
+                    <!-- ===== APOL INFORMACION ===== -->
+
+                       <div class="encabezado_dashboard">
+                           <h3 class="texto">Dashboard</h3>
+                       </div>
+                   <div class="items">
+                       <h4 class="texto items"> <span class="icons"><i class="fas fa-brain"></i></span>¿Qué es Apol?</h4>
+                       <h4 class="texto items"><span class="parpadea"><i class="fas fa-video"></i></span>En vivo</h4>
+                       <h4 class="texto items"> <span class="icons"><i class="fas fa-tv"></i></span>Nuestros Cursos</h4>
+                   </div>
+
+               </div>
+               <!-- ===== DIV 2/3 DASHBOARD DERECHO ===== -->
+               <div class="dashboard_derecha">
+                   <!-- ===== DIV BUSCADOR ===== -->
+                   <div class="buscador">
+                   <h3 class="texto bold encabezado_buscador">¿Quieres pasar el Pre Politecnico?</h3>
+                   <h4 class="texto bold encabezado_buscador">Más de 200 videos, todo el material para que pases tu prepo</h4>
+
+
+                   <div class="general">
+
+
+                       {% for categoria in categorias %}
+                       <div class="card_curso">
+                        <div class="tema_card basico">
+                            <h6 class="categoria">Basico</h6>
+                            <h3 class="tema">Lógica y Teoría de Conjuntos</h3>
+                            <h7 class="mirar_sub_tem">Mira todos los subtemas <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </h7></div>
+                        <div class="descrip_card">
+                            <h4 class="categoria texto">Videos</h4>
+                            <div class="video-lista-card">
+                             <li class="texto">Video 1</li>
+                             <li class="texto">Video 2</li>
+                             <li class="texto"> Video 3</li>
+                             <li class="texto">¡Da click para ver más! +25</li>
+                            </div>
+                        </div>
+                    </div>
+                       {% endfor %}
+                       
+
+
+                </div>
+                   <!-- ===== DIV CATEGORIA ===== -->
+                   <!-- ===== DIV CARD_CURSO_GENERAL ===== -->
+
+                   </div>
+
+            </div>
+
+
+{% endblock %}
